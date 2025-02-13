@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Project</title>
+
+
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        background-color: orange;
+        color: darkgreen;
+        font-size: large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      div {
+        align-items: center;
+        border: 2px solid black;
+        margin-bottom: 5px;
+      }
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>HTML Forms</h1>
+
+    <form action="result.html" method="get">
+      <!--label ve text input kullanımı-->
+      <!--label sayesinde mouse ile gezinirken sesli betimleme yapılır-->
+
+      <div>
+        <label for="fname">username:</label> <br />
+        <input
+          type="text"
+          id="fname"
+          name="isim"
+          placeholder="Your Name"
+        /><br /><!--placeholder sayfa yüklendiğinde soluk bir açıklama gösterir-->
+        <label for="sname">Surname</label><br />
+        <input type="text" name="soyisim" id="sname" value="Soyad" />
+        <!--value : sayfa yüklendiğinde normal renk ve font ile bir değer gelir-->
+      </div>
+
+      <!--Password-->
+
+      <div>
+        <label for="sifre">Password</label><br />
+        <input type="password" name="Parola" id="sifre" required />
+      </div>
+
+      <!--Radio-->
+      <div>
+        <label for="">Cinsiyetiniz</label><br />
+        <label for="gender1">Male</label>
+        <input
+          type="radio"
+          name="Cinsiyet"
+          id="gender1"
+          value="Erkek"
+          checked
+        /><br />
+        <!--Checked attrbute sayfa yüklendiğinde seçili gelmesini sağlar-->
+        <label for="gender2">Female</label>
+        <input type="radio" name="Cinsiyet" id="gender2" value="Kadın" /><br />
+        <!--Radio button seçenek name attributeler aynı olmalı-->
+        <label for="gender2">Other</label>
+        <input
+          type="radio"
+          name="Cinsiyet"
+          id="gender3"
+          value="Belirtilmemiş"
+        /><br />
+      </div>
+      <!--CheckBox-->
+      <div>
+        <label>Select Fav Animals</label><br />
+        <input type="checkbox" name="animal_1" id="panda" value="Panda" />
+        <label for="panda">Panda</label><br />
+        <input type="checkbox" name="animal_2" id="aslan" value="aslan" />
+        <label for="aslan">aslan</label><br />
+        <input type="checkbox" name="animal_3" id="kaplan" value="Kaplan" />
+        <label for="kaplan">kaplan</label><br />
+        <input
+          type="checkbox"
+          name="animal_4"
+          id="balPorsugu"
+          value="Bal Porsuğu"
+        />
+        <label for="balPorsugu">bal porsuğu</label>
+      </div>
+      <br /><br />
+
+      <!--    Number  -->
+      <div>
+        <label for="age">Age</label><br />
+        <input
+          type="number"
+          name="Yaş"
+          id="age"
+          step="0"
+          min="18"
+          max="45"
+          placeholder="Your age"
+          style="width: 250px"
+          required
+        />
+      </div>
+      <br />
+      <!--    Search  -->
+
+      <div>
+        <input type="search" name="arandı" id="ara" placeholder="Search" />
+        <label for="ara">Search</label>
+      </div>
+      <br />
+
+      <!-- Colour -->
+      <div>
+        <input type="color" name="renk" id="renk" /><br />
+        <label for="renk">Colour</label>
+      </div>
+      <br />
+      <!--  Date  -->
+      <div>
+        <input
+          type="date"
+          name="secilen_tarih"
+          id="tarih"
+          min="2024-05-01"
+          max="2026-01-01"
+        /><br />
+        <label for="tarih">Date</label><br />
+      </div>
+      <br />
+      <!--  E-Mail  -->
+      <div>
+        <label for="eMail">E-Mail</label><br />
+        <input type="email" name="email" id="eMail" />
+      </div>
+      <br />
+
+      <!--  File  -->asad
+      <div>
+        <label for="dosya">Dosya Seç</label>
+        <input type="file" id="dosya" name="secilenDosya" />
+      </div>
+      <br />
+
+      <!--  Telefon  -->
+
+      <div>
+        <label for="tel">Phone</label><br />
+        <input
+          type="tel"
+          name="telefonNumarasi"
+          id="tel"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          placeholder="xxx-xxx-xx-xx"
+        />
+      </div>
+      <hr />
+      <!--  Select  -->
+      <!--  dropdown menu  -->
+      <label for="tatli">Hangi Tatlıyı Seversiniz?</label>
+      <br />
+      <select name="secilenTatli" id="tatli" size="7" multiple>
+        <option value="">Sütlaç</option>
+        <option value="Keskul">Keşkül</option>
+        <option value="Supangle">Süpangle</option>
+        <option value="Asure">Aşure</option>
+        <option value="Magnolia">Magnolia</option>
+        <option value="Güllaç">Güllaç</option>
+        <option value="Baklava">Baklava</option>
+      </select>
+      <hr />
+
+      <!--  Opt Group  -->
+      <label for="tatli">Hangi Tatlıyı Seversiniz?</label>
+      <br />
+      <select name="secilenTatli" id="tatli" size="24" multiple>
+        <optgroup label="Sutlu Tatlilar">
+          <option value="Sutlac">Sütlaç</option>
+          <option value="Keskul">Keşkül</option>
+          <option value="Supangle">Süpangle</option>
+          <option value="Asure">Aşure</option>
+          <option value="Magnolia">Magnolia</option>
+          <option value="Güllaç">Güllaç</option>
+        </optgroup>
+        <optgroup label="Serbetli Tatlilar">
+          <option value="Baklava">Baklava</option>
+          <option value="Künefe">Künefe</option>
+          <option value="Bulbul Yuvasi">Bülbül Yuvası</option>
+          <option value="Tulumba">Tulumba</option>
+          <option value="Afyon Kadayifi">Afyon Kadayifi</option>
+          <option value="Güllaç">Güllaç</option>
+        </optgroup>
+        <optgroup label="Cikolatali Tatlilar">
+          <option value="Waffle">Waffle</option>
+          <option value="Mousse">Mousse</option>
+          <option value="Yaş Pasta">Yaş Pasta</option>
+        </optgroup>
+      </select>
+
+      <!--  Text Area -->
+
+      <div>
+        <label for="Yorum">Yorum</label><br />
+        <textarea
+          name="Yorum"
+          id="Yorum"
+          style="width: 150px; height: 150px"
+        ></textarea>
+      </div>
+
+      <!-- Datalist -->
+      <!-- Bu da dropdown menu gibi ancak değil. burada kendi inputumuzu girme seçeneğimiz de var-->
+      <div>
+        <label for="input-browser">Hangi Browser Kullanıyorsun</label>
+        <br />
+        <input
+          type="text"
+          name="Kullanılan Browser"
+          id="input-browser"
+          list="browser"
+        />
+
+        <datalist id="browser">
+          <option value="Opera"></option>
+          <option value="Chrome"></option>
+          <option value="Safari"></option>
+          <option value="Brave"></option>
+          <option value="Firefox"></option>
+          <option value="Yandex"></option>
+        </datalist>
+      </div>
+      <br />
+
+      <!--  Field Set -->
+      <div>
+        <fieldset>
+          <legend>Kişisel Bilgiler</legend>
+          <label for="fname">username:</label> <br />
+          <input
+            type="text"
+            id="fname"
+            name="isim"
+            placeholder="Your Name"
+          /><br /><!--placeholder sayfa yüklendiğinde soluk bir açıklama gösterir-->
+          <label for="sname">Surname</label><br />
+          <input type="text" name="soyisim" id="sname" value="Soyad" />
+        </fieldset>
+      </div>
+
+      <br /><br /><br /><br /><br /><br /><br />
+      <input type="reset" value="Reset" />
+      <input type="submit" value="Send" />
+      <br /><br /><br />
+    </form>
+  </body>
+</html>
+
+    
+</body>
+</html>
